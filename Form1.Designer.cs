@@ -33,6 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxTaller = new System.Windows.Forms.ComboBox();
+            this.dataGridViewDatos = new System.Windows.Forms.DataGridView();
+            this.buttonMostrar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxEstudiantes
@@ -79,11 +82,34 @@
             this.comboBoxTaller.Size = new System.Drawing.Size(121, 24);
             this.comboBoxTaller.TabIndex = 5;
             // 
+            // dataGridViewDatos
+            // 
+            this.dataGridViewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDatos.Location = new System.Drawing.Point(430, 36);
+            this.dataGridViewDatos.Name = "dataGridViewDatos";
+            this.dataGridViewDatos.RowHeadersWidth = 51;
+            this.dataGridViewDatos.RowTemplate.Height = 24;
+            this.dataGridViewDatos.Size = new System.Drawing.Size(501, 306);
+            this.dataGridViewDatos.TabIndex = 6;
+            // 
+            // buttonMostrar
+            // 
+            this.buttonMostrar.Location = new System.Drawing.Point(430, 348);
+            this.buttonMostrar.Name = "buttonMostrar";
+            this.buttonMostrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonMostrar.TabIndex = 7;
+            this.buttonMostrar.Text = "Mostrar";
+            this.buttonMostrar.UseVisualStyleBackColor = true;
+            this.buttonMostrar.Click += new System.EventHandler(this.buttonMostrar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(991, 453);
+            this.Controls.Add(this.buttonMostrar);
+            this.Controls.Add(this.dataGridViewDatos);
             this.Controls.Add(this.comboBoxTaller);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -92,6 +118,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,6 +131,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxTaller;
+        private System.Windows.Forms.DataGridView dataGridViewDatos;
+        private System.Windows.Forms.Button buttonMostrar;
     }
 }
 

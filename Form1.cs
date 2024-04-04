@@ -16,6 +16,7 @@ namespace Examen_Parcial
         List<Taller> tallers = new List<Taller>();
         List<Alumno> alumnos = new List<Alumno>();
         List<Inscripcion> inscripcions = new List<Inscripcion>();
+        BindingList<Dato> datos = new BindingList<Dato>();
         public Form1()
         {
             InitializeComponent();
@@ -77,7 +78,7 @@ namespace Examen_Parcial
 
         }
 
-        private void GuardarTaller()
+        private void GuardarInscripcion()
         {
 
             FileStream stream = new FileStream("Inscripciones.txt", FileMode.OpenOrCreate, FileAccess.Write);
@@ -97,13 +98,40 @@ namespace Examen_Parcial
         {
             Inscripcion inscripcion = new Inscripcion();
             inscripcion.DpiEstudiante = Convert.ToInt32(comboBoxEstudiantes.SelectedValue);
-            inscripcion.CodigoTaller = comboBoxTaller.Text;
+            inscripcion.CodigoTaller =  Convert.ToInt16(comboBoxTaller.SelectedValue);
             inscripcion.FechaInscripcion = DateTime.Now;
 
             inscripcions.Add(inscripcion);
 
-            GuardarTaller();
+            GuardarInscripcion();
 
+        }
+         
+        private void buttonMostrar_Click(object sender, EventArgs e)
+        {
+            foreach (var alumno in alumnos)
+            {
+                foreach (var taller in tallers)
+                {
+                     foreach (var inscripcion in inscripcions)
+                        {
+                        if (inscripcion.DpiEstudiante == alumno.Dpi && inscripcion.CodigoTaller == taller.CodigoTaller)
+                        {
+                            Dato dato = new Dato();
+                            dato.NombreEstudiante = alumno.Nombre;
+                            dato.NombreTaller = taller.NombreTaller;
+
+
+                            datos.Add(dato);
+                        }
+                    }
+                }
+            }
+                
+
+            dataGridViewDatos.DataSource = null;
+            dataGridViewDatos.DataSource = datos;
+            dataGridViewDatos.Refresh();
         }
     }
     

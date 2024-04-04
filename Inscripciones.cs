@@ -9,11 +9,11 @@ namespace Examen_Parcial
     internal class Inscripcion
     {
         int dpiEstudiante;
-        string codigoTaller;
+        int codigoTaller;
         DateTime fechaInscripcion;
 
         public int DpiEstudiante { get => dpiEstudiante; set => dpiEstudiante = value; }
-        public string CodigoTaller { get => codigoTaller; set => codigoTaller = value; }
+        public int CodigoTaller { get => codigoTaller; set => codigoTaller = value; }
         public DateTime FechaInscripcion { get => fechaInscripcion; set => fechaInscripcion = value; }
     }
 }
