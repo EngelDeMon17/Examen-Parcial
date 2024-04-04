@@ -35,6 +35,7 @@
             this.comboBoxTaller = new System.Windows.Forms.ComboBox();
             this.dataGridViewDatos = new System.Windows.Forms.DataGridView();
             this.buttonMostrar = new System.Windows.Forms.Button();
+            this.buttonOrdenar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,12 +103,23 @@
             this.buttonMostrar.UseVisualStyleBackColor = true;
             this.buttonMostrar.Click += new System.EventHandler(this.buttonMostrar_Click);
             // 
+            // buttonOrdenar
+            // 
+            this.buttonOrdenar.Location = new System.Drawing.Point(512, 349);
+            this.buttonOrdenar.Name = "buttonOrdenar";
+            this.buttonOrdenar.Size = new System.Drawing.Size(75, 23);
+            this.buttonOrdenar.TabIndex = 8;
+            this.buttonOrdenar.Text = "Ordenar";
+            this.buttonOrdenar.UseVisualStyleBackColor = true;
+            this.buttonOrdenar.Click += new System.EventHandler(this.buttonOrdenar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(991, 453);
+            this.Controls.Add(this.buttonOrdenar);
             this.Controls.Add(this.buttonMostrar);
             this.Controls.Add(this.dataGridViewDatos);
             this.Controls.Add(this.comboBoxTaller);
@@ -133,6 +145,7 @@
         private System.Windows.Forms.ComboBox comboBoxTaller;
         private System.Windows.Forms.DataGridView dataGridViewDatos;
         private System.Windows.Forms.Button buttonMostrar;
+        private System.Windows.Forms.Button buttonOrdenar;
     }
 }
 

@@ -17,6 +17,7 @@ namespace Examen_Parcial
         List<Alumno> alumnos = new List<Alumno>();
         List<Inscripcion> inscripcions = new List<Inscripcion>();
         BindingList<Dato> datos = new BindingList<Dato>();
+        
         public Form1()
         {
             InitializeComponent();
@@ -77,7 +78,6 @@ namespace Examen_Parcial
             comboBoxTaller.Refresh();
 
         }
-
         private void GuardarInscripcion()
         {
 
@@ -93,7 +93,6 @@ namespace Examen_Parcial
 
             writer.Close();
         }
-
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
             Inscripcion inscripcion = new Inscripcion();
@@ -106,7 +105,6 @@ namespace Examen_Parcial
             GuardarInscripcion();
 
         }
-         
         private void buttonMostrar_Click(object sender, EventArgs e)
         {
             foreach (var alumno in alumnos)
@@ -127,11 +125,18 @@ namespace Examen_Parcial
                     }
                 }
             }
-                
-
             dataGridViewDatos.DataSource = null;
             dataGridViewDatos.DataSource = datos;
             dataGridViewDatos.Refresh();
+        }
+
+        private void buttonOrdenar_Click(object sender, EventArgs e)
+        {
+
+            List<Dato> datosOrdenados = datos.OrderBy(d => d.NombreTaller).ToList();
+
+            dataGridViewDatos.DataSource = datosOrdenados; ;
+
         }
     }
     
