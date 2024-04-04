@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen_Parcial
 {
-    internal class Inscripciones
+    internal class Inscripcion
     {
         int dpiEstudiante;
         string codigoTaller;

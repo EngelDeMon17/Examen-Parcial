@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Examen_Parcial
 {
-    internal class Talleres
+    internal class Taller
     {
-        string codigoTaller;
+        int codigoTaller;
         string nombreTaller;
-        string costoTaller;
+        int costoTaller;
 
-        public string CodigoTaller { get => codigoTaller; set => codigoTaller = value; }
+        public int CodigoTaller { get => codigoTaller; set => codigoTaller = value; }
         public string NombreTaller { get => nombreTaller; set => nombreTaller = value; }
-        public string CostoTaller { get => costoTaller; set => costoTaller = value; }
+        public int CostoTaller { get => costoTaller; set => costoTaller = value; }
     }
 }

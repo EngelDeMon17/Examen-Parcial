@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen_Parcial
 {
-    internal class Alumnos
+    internal class Alumno
     {
         int dpi;
         string nombre;
