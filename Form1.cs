@@ -135,7 +135,12 @@ namespace Examen_Parcial
 
             List<Dato> datosOrdenados = datos.OrderBy(d => d.NombreTaller).ToList();
 
-            dataGridViewDatos.DataSource = datosOrdenados; ;
+            dataGridViewDatos.DataSource = datosOrdenados;
+
+            int numeroDeAlumnos = alumnos.Count;
+            labelAlumnosN.Text = numeroDeAlumnos.ToString();
+            labelAlumnosN.Visible = true;
+
 
         }
     }
